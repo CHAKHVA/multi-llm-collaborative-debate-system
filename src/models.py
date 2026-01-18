@@ -42,3 +42,8 @@ class JudgeVerdict(BaseModel):
     best_solver_id: str
     rationale: str
     final_answer_to_user: str
+
+
+class EvaluationResult(BaseModel):
+    is_correct: bool
+    reasoning: str
