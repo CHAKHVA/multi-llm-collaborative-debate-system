@@ -1,4 +1,4 @@
-from typing import List, Literal
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
@@ -12,11 +12,13 @@ class RolePreference(BaseModel):
 
 class Solution(BaseModel):
     solution_text: str = Field(description="Step-by-step reasoning")
-    final_answer: str = Field(description="The concise final answer")
+    final_answer: str = Field(
+        description="The concise final answer (e.g., '42', 'Option B')"
+    )
 
 
 class CritiqueError(BaseModel):
-    location: str
+    location: str = Field(description="Where the error occurred (e.g., 'Step 3')")
     description: str
     severity: Literal["minor", "critical"]
 
@@ -24,15 +26,15 @@ class CritiqueError(BaseModel):
 class PeerReview(BaseModel):
     reviewer_id: str
     target_solver_id: str
-    strengths: List[str]
-    weaknesses: List[str]
-    errors: List[CritiqueError]
-    score: int = Field(description="Score out of 10")
+    strengths: list[str]
+    weaknesses: list[str]
+    errors: list[CritiqueError]
+    score: int = Field(description="Quality score out of 10")
 
 
 class RefinedSolution(BaseModel):
     changes_made: str = Field(description="Summary of changes based on feedback")
-    solution_text: str
+    solution_text: str = Field(description="The improved step-by-step reasoning")
     final_answer: str
 
 
