@@ -1,6 +1,7 @@
 openai
 pydantic
 tenacity
+python-dotenv
 pandas
 matplotlib
 seaborn

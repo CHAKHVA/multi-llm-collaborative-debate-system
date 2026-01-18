@@ -10,6 +10,7 @@ from openai import OpenAI
 
 from src.agents import call_gpt
 from src.models import (
+    EvaluationResult,
     JudgeVerdict,
     PeerReview,
     RefinedSolution,
@@ -244,4 +245,56 @@ Select the solver with the best final answer. Provide your rationale and state t
         prompt,
         JudgeVerdict,
         system_prompt_override=judge_system_prompt,
+    )
+
+
+def grade_answer(
+    client: OpenAI,
+    question: str,
+    ground_truth: str,
+    final_answer: str,
+) -> EvaluationResult:
+    """
+    Grade the final answer against the ground truth using LLM-as-a-Judge.
+
+    Args:
+        client: OpenAI client instance.
+        question: The original problem question.
+        ground_truth: The correct answer.
+        final_answer: The system's final answer to evaluate.
+
+    Returns:
+        EvaluationResult indicating correctness and reasoning.
+    """
+    grader_system_prompt = (
+        "You are an expert grader evaluating answers to complex problems. "
+        "Your job is to determine if the given answer is correct by comparing it "
+        "to the ground truth. Be fair but rigorous. Consider semantic equivalence - "
+        "answers may be phrased differently but still be correct."
+    )
+
+    prompt = f"""Evaluate whether the given answer is correct.
+
+**Problem:**
+{question}
+
+**Ground Truth (Correct Answer):**
+{ground_truth}
+
+**Answer to Evaluate:**
+{final_answer}
+
+Determine if the answer is correct. Consider:
+- Semantic equivalence (different phrasing, same meaning)
+- Mathematical equivalence (e.g., "1/2" vs "0.5")
+- Partial credit is NOT allowed - the answer is either correct or incorrect
+
+Provide your reasoning and final verdict."""
+
+    return call_gpt(
+        client,
+        "D",  # Use agent D (balanced synthesizer) for grading
+        prompt,
+        EvaluationResult,
+        system_prompt_override=grader_system_prompt,
     )
