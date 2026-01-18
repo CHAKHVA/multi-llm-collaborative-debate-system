@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "category": "Logic",
+    "difficulty": "Hard",
+    "question": "Three gods A, B, and C are called, in no particular order, True, False, and Random. True always speaks truly, False always speaks falsely, but whether Random speaks truly or falsely is a completely random matter. You must determine the identities of A, B, and C by asking three yes-no questions; each question must be put to exactly one god. The gods understand English, but will answer all questions in their own language, in which the words for yes and no are 'da' and 'ja', in some order. You do not know which word means which. What is the first question you should ask to ensure you can solve the puzzle?",
+    "ground_truth": "Ask god B: 'If I asked you 'Is A Random?', would you say 'ja'?' (If B answers 'ja', then C is not Random. If B answers 'da', then A is not Random. This isolates a non-random god to ask the next questions to.)"
+  },
+  {
+    "id": 2,
+    "category": "Math",
+    "difficulty": "Medium",
+    "question": "Find the last two digits of 7^2024.",
+    "ground_truth": "01"
+  },
+  {
+    "id": 3,
+    "category": "Physics",
+    "difficulty": "Medium",
+    "question": "A ladder of length L and mass m leans against a frictionless wall. The coefficient of static friction between the ladder and the floor is 0.4. What is the minimum angle (in degrees, rounded to 1 decimal place) the ladder can make with the floor without slipping?",
+    "ground_truth": "51.3"
+  },
+  {
+    "id": 4,
+    "category": "Game Theory",
+    "difficulty": "Hard",
+    "question": "In a sealed-bid second-price auction (Vickrey auction) with two bidders, where Bidder A values the item at $100 and Bidder B values it at $80, what is Bidder A's optimal bidding strategy to maximize utility?",
+    "ground_truth": "Bid exactly $100 (Truthful bidding is the dominant strategy)"
+  },
+  {
+    "id": 5,
+    "category": "Logic",
+    "difficulty": "Hard",
+    "question": "Cheryl gives Albert and Bernard ten possible dates for her birthday: May 15, May 16, May 19, June 17, June 18, July 14, July 16, Aug 14, Aug 15, Aug 17. She tells Albert the Month and Bernard the Day. Albert says: 'I don't know the birthday, but I know Bernard doesn't know either.' Bernard says: 'At first I didn't know, but now I do.' Albert says: 'Now I also know.' When is Cheryl's birthday?",
+    "ground_truth": "July 16"
+  },
+  {
+    "id": 6,
+    "category": "Math",
+    "difficulty": "Hard",
+    "question": "A standard 12-hour clock has an hour hand and a minute hand. How many times do the hands form a 90-degree angle between 12:00 PM and 12:00 AM (inclusive of start, exclusive of end)?",
+    "ground_truth": "22"
+  },
+  {
+    "id": 7,
+    "category": "Probability",
+    "difficulty": "Medium",
+    "question": "You are on a game show with 3 doors. Behind one is a car; behind the others, goats. You pick Door 1. The host, who knows what's behind the doors, opens Door 3, which has a goat. He asks if you want to switch to Door 2. What is the probability of winning if you switch?",
+    "ground_truth": "2/3"
+  },
+  {
+    "id": 8,
+    "category": "Math",
+    "difficulty": "Medium",
+    "question": "If x^x^x... (infinite power tower) = 2, what is x?",
+    "ground_truth": "sqrt(2) or 1.414"
+  },
+  {
+    "id": 9,
+    "category": "Physics",
+    "difficulty": "Medium",
+    "question": "A car accelerates from rest at a constant rate 'a' for time t1, then travels at a constant speed for time t2, and finally decelerates at a constant rate 'a' to a stop. If the total distance is D and total time is T, derive the expression for maximum speed V_max in terms of D, T, and a.",
+    "ground_truth": "V_max = (aT - sqrt((aT)^2 - 4aD)) / 2"
+  },
+  {
+    "id": 10,
+    "category": "Logic",
+    "difficulty": "Hard",
+    "question": "100 prisoners are lined up. Each wears a red or blue hat. They can see the hats in front of them but not their own. Starting from the back, each must guess their color. If they guess right, they live. They can agree on a strategy beforehand. What is the strategy that guarantees at least 99 survival?",
+    "ground_truth": "The first prisoner (back of line) counts the number of red hats he sees. If even, he says 'Red'; if odd, 'Blue'. This communicates the parity to the next person, allowing everyone else to deduce their own color based on the parity they see."
+  },
+  {
+    "id": 11,
+    "category": "Math",
+    "difficulty": "Hard",
+    "question": "Find the smallest positive integer x such that 2x is a perfect square, 3x is a perfect cube, and 5x is a perfect fifth power.",
+    "ground_truth": "2^15 * 3^10 * 5^24"
+  },
+  {
+    "id": 12,
+    "category": "Logic",
+    "difficulty": "Medium",
+    "question": "Albert is 20% taller than Bob. Bob is 20% shorter than Charlie. Who is taller, Albert or Charlie, and by what percentage?",
+    "ground_truth": "Charlie is taller. Albert is 4% shorter than Charlie."
+  },
+  {
+    "id": 13,
+    "category": "Probability",
+    "difficulty": "Hard",
+    "question": "Two friends agree to meet between 12:00 and 1:00 PM. Each waits for 15 minutes. What is the probability they meet?",
+    "ground_truth": "7/16 or 0.4375"
+  },
+  {
+    "id": 14,
+    "category": "Physics",
+    "difficulty": "Hard",
+    "question": "Calculate the escape velocity from a spherical asteroid with density 3000 kg/m^3 and radius 10 km. G = 6.674e-11.",
+    "ground_truth": "12.9 m/s (approx)"
+  },
+  {
+    "id": 15,
+    "category": "Math",
+    "difficulty": "Medium",
+    "question": "How many trailing zeros are in 100! (100 factorial)?",
+    "ground_truth": "24"
+  },
+  {
+    "id": 16,
+    "category": "Game Theory",
+    "difficulty": "Medium",
+    "question": "Two criminals are arrested. If A confesses and B doesn't, A goes free, B gets 10 years. If both confess, both get 5 years. If neither confesses, both get 1 year. What is the Nash Equilibrium?",
+    "ground_truth": "Both confess"
+  },
+  {
+    "id": 17,
+    "category": "Logic",
+    "difficulty": "Medium",
+    "question": "A man looks at a photo and says: 'Brothers and sisters I have none, but that man's father is my father's son.' Who is in the photo?",
+    "ground_truth": "His son"
+  },
+  {
+    "id": 18,
+    "category": "Math",
+    "difficulty": "Hard",
+    "question": "Solve for real x: sqrt(x + sqrt(x + sqrt(x + ...))) = 5.",
+    "ground_truth": "20"
+  },
+  {
+    "id": 19,
+    "category": "Physics",
+    "difficulty": "Medium",
+    "question": "A block slides down a 30-degree incline at constant velocity. What is the coefficient of kinetic friction?",
+    "ground_truth": "tan(30) or approx 0.577"
+  },
+  {
+    "id": 20,
+    "category": "Logic",
+    "difficulty": "Hard",
+    "question": "You have 12 coins, one is counterfeit (heavier or lighter). You have a balance scale. What is the minimum number of weighings to identify the fake and its relative weight?",
+    "ground_truth": "3"
+  },
+  {
+    "id": 21,
+    "category": "Probability",
+    "difficulty": "Hard",
+    "question": "Mr. Jones has two children. The older child is a girl. What is the probability that both children are girls?",
+    "ground_truth": "1/2"
+  },
+  {
+    "id": 22,
+    "category": "Math",
+    "difficulty": "Medium",
+    "question": "The sum of three consecutive integers is 120. What are the integers?",
+    "ground_truth": "39, 40, 41"
+  },
+  {
+    "id": 23,
+    "category": "Logic",
+    "difficulty": "Hard",
+    "question": "There are 5 houses of different colors. The Green house is immediately to the right of the Ivory house. The Norwegian lives in the first house. The man who smokes Chesterfields lives in the house next to the man with the Fox. The Norwegian lives next to the Blue house. Who drinks Water?",
+    "ground_truth": "The Norwegian"
+  },
+  {
+    "id": 24,
+    "category": "Math",
+    "difficulty": "Hard",
+    "question": "What is the sum of the coefficients of the expansion (x + y)^10?",
+    "ground_truth": "1024"
+  },
+  {
+    "id": 25,
+    "category": "Probability",
+    "difficulty": "Medium",
+    "question": "What is the probability of rolling a sum of 7 with two standard six-sided dice?",
+    "ground_truth": "1/6"
+  }
+]
